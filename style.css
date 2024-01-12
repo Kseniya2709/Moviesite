@@ -1,0 +1,390 @@
+/*   
+Theme Name: Moviesite
+Theme URI: 
+Description: Theme for a website with movies
+Author: Ksenia Shaldaeva
+Author URI: https://www.linkedin.com/in/ksenia-shaldaeva-126955298/
+Version: 1.0.0
+*/
+
+/*Base*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Open+Sans:wght@400;600;700&display=swap');
+
+:root {
+	--orange-light:  rgb(255, 229, 182);
+	--dark-blue: #194F94;
+    --Secondary: #2F2105;
+    --light: #7E7D7A;
+    --white: #fff;
+    --orange: #f17013;
+}
+
+body{
+	font-family: Open Sans;
+    font-style: normal;
+    color: var(--Secondary);
+    padding: 0;
+    margin: 0;
+}
+h1{
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 47px;
+}
+h2{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 1.28px;
+}
+a{
+    text-decoration: none;
+    color: var(--Secondary);
+}
+.container {
+    margin-left: 135px;
+    margin-right: 135px;
+}
+.row{
+    display: flex;
+}
+.middlex{
+    align-items: center;
+}
+.orange{
+    color: var(--orange);
+}
+.black-btn{
+    border-radius: 33px;
+    background: var(--Secondary,);
+    box-shadow: 0px 4px 32px 0px rgba(223, 195, 124, 0.25);
+    color: var(--white);
+    padding: 12px 32px;
+}
+
+/*Header*/ 
+.navbar {
+    position: fixed;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    background-color: var(--orange-light);
+    z-index: 999;
+}
+#main-menu{
+    margin-right: auto;
+    margin-left: auto;
+}
+.list-menu ul{
+    list-style-type: none;
+
+}
+.list-menu ul li{
+    display: inline;
+    margin-right: 28px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.list-menu ul li a:hover{
+    color: var(--white);
+}
+.list-menu ul li.current-menu-item a{
+    color: var(--orange);
+}
+
+/*Top baner home*/
+
+    .baner  {
+        background-color: var(--orange-light);
+        padding-top: 170px ;
+        padding-bottom: 65px ;
+    }
+    .contentn-baner{
+        gap: 50px;
+    }
+    .description{
+        color: var(--light);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+        margin-top: 27px;
+        margin-bottom: 27px;
+    }
+    .buttons{
+        display: flex;
+        gap: 28px;
+    }
+    .buttons .black-btn{
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    .buttons .link-btn {
+        border-radius: 33px;
+        padding: 10px 24px;
+        font-weight: 600;
+    }
+
+/*Posts block*/
+
+.movies-block{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: stretch; 
+}
+.movies-block .movie {
+    box-shadow: 0px 4px 32px 0px rgba(0,0,0, 0.3);
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+}
+.movies-block .movie img{
+    border-radius: 20px;
+    width: 300px;
+    height: 450px;
+}
+.movies-block .movie .rating{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: var(--white);
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 0px 6px rgba(240,246,252,.7);
+}
+.movies-block .movie .rating .star{
+    color: var(--orange);
+}
+.movies-block .movie .rating .number{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.56px;
+}
+.movies-block .movie .title{
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.movies-block .movie .button{
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+ .orange-btn{
+    border-radius: 33px;
+    padding: 8px 16px;
+    color: var(--orange);
+    border: 2px solid var(--orange);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.load-more{
+    padding-bottom: 12px;
+    padding-top: 12px;
+    text-align: center;
+    margin-top: 40px;
+}
+/* SEARCHFORM */
+#searchform label{
+    border: 2px solid var(--Secondary);
+    border-radius: 20px;
+    padding: 6px 8px 8px;
+    margin: 0;
+}
+#searchform input {
+    border:none;
+    outline:none;
+    color: var(--Secondary);
+    font-size: 18px;
+    font-weight: 600;
+}
+#searchform .search-submit {
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none"><path d="M21.5201 21.5L17.0341 17.006L21.5201 21.5ZM19.5201 11C19.5201 13.2543 18.6246 15.4163 17.0306 17.0104C15.4365 18.6045 13.2745 19.5 11.0201 19.5C8.7658 19.5 6.60379 18.6045 5.00973 17.0104C3.41567 15.4163 2.52014 13.2543 2.52014 11C2.52014 8.74566 3.41567 6.58365 5.00973 4.98959C6.60379 3.39553 8.7658 2.5 11.0201 2.5C13.2745 2.5 15.4365 3.39553 17.0306 4.98959C18.6246 6.58365 19.5201 8.74566 19.5201 11V11Z" stroke="%231D1D1D" stroke-width="2" stroke-linecap="round"/></svg>');
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-bottom: 2px;
+}
+
+/* filter block */
+.filter-block{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/* ajax search */
+#searchform {
+    position: relative;
+}
+
+.result-search {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 300px;
+    background: var(--white);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    /*border: 2px solid var(--Secondary);  */
+    margin-top: 5px;
+    max-height: 230px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    color: var(--Secondary);
+    scrollbar-color: dark;
+    scrollbar-width: thin;
+    overscroll-behavior: contain;
+}
+
+.result-search::-webkit-scrollbar {
+    width: 6px;
+    background-color: #eff2f3;
+}
+
+.result-search::-webkit-scrollbar-thumb {
+    background-color: #dddddd;
+    border-radius: 4em;
+}
+.result-search .result-search-item:first-child {
+    border-top: 2px solid var(--Secondary);
+}
+.result-search-item {
+    position: relative;
+    border: 2px solid var(--Secondary);
+    border-top: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    list-style-type: none;
+}
+.result-search-item a{
+    display: block;
+}
+
+/*filters*/
+.filter{
+    font-size: 18px;
+    width: 110px;
+    font-weight: 600;
+    padding: 8px;
+    border-radius: 20px;
+    border: 2px solid var(--Secondary);
+    margin-bottom: 2px;
+    text-align: center;
+    padding-left: 30px;
+    margin-left: 15px;
+}
+.sort-rating, .sort-years {
+    position: relative;
+    display: inline-block;
+}
+.sort-rating .star, .sort-years .clock{
+    position: absolute;
+    left: 23px;
+    top: 7px;
+}
+
+/* SINGLE MOVIE*/
+.single-movie .movie{
+    padding-top: 150px;
+}
+.single-movie .movie .row {
+    gap: 100px;
+}
+.single-movie .movie .img img{
+    width: 500px;
+}
+.single-movie .rating, .single-movie .date-create{
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.56px;
+    margin-top: 20px;
+}
+.gallery {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.gallery img{
+    width: 29%;
+}
+
+/* FOOTER*/
+footer .creator{
+    background-color: var(--Secondary);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    
+}
+
+
+@media (max-width: 1025px) { 
+    .container {
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+    .single-movie .movie {
+        padding-top: 128px;
+    }
+    .single-movie .movie .row {
+        gap: 0px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .single-movie .movie .img img{
+        width: 300px;
+    }
+    .gallery img {
+        width: 31.5%;
+    }
+    .gallery {
+        gap: 20px;
+    }
+
+}
+@media(max-width: 724px){
+    .row{
+        flex-wrap: wrap;
+    }
+    .filter-block{
+        justify-content: center;
+    }
+    .search-block{
+        margin-bottom: 20px;
+    }
+}
+@media(max-width: 500px) {
+
+    .navbar {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .navbar .logo img{
+        width: 125px;
+        height: 55px;
+    }
+    .list-menu ul li {
+        font-size: 23px;
+        display: block;
+    }
+    .container {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
